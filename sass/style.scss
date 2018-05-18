@@ -1,5 +1,13 @@
-body {margin: 0;}
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url(../images/board.jpg);
+  background-size: cover;
+}
+
 
 .ui-sortable {
   min-height: 80px;
@@ -15,18 +23,59 @@ body {margin: 0;}
   color: white;
 }
 /* BOARD */
-.board h1 {
-  margin-left: 8px;
+.board {
+  text-align: center;
+  padding: 55px;
+  position: relative;
+  top: 30px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 27.5%;
+    z-index: -1;
+  }
+  h1 {
+    color: black;
+  }
+}
+
+.create-column {
+  border-radius: 5px;
+  background: rgb(57, 185, 74);
+  border: none;
+  height: 30px;
+  width: 130px;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
 }
 .column-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
+  .btn-primary, .column-add-card {
+    border-radius: 5px;
+    border: none;
+    background: rgb(17, 161, 61);
+    margin: 3px;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+
+    }
+  }
 }
 
 
 /* COLUMN */
 .column {
+  border-radius: 5px;  
   order: 1;
   min-width: 300px;
   min-height: 50vh;
@@ -34,12 +83,12 @@ body {margin: 0;}
   margin-left: 8px;
   list-style: none;
   position: relative;
+  background: rgb(20, 145, 20);
+  border: 1px solid black;
 }
 .column-add-card {
   cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
-  display: block;
+  text-decoration: none;
 }
 
 /* STYLE KARTY */
@@ -51,12 +100,11 @@ body {margin: 0;}
   padding: 4px;
   overflow: hidden;
   position: relative;
+  p {
+    border-bottom: 1px solid;
+  }
 }
-.card-list {
-  list-style: none;
-  margin: 5px;
-  padding: 0px;
-}
+
 .card-description {
   margin: 2px 0;
 }
@@ -67,4 +115,21 @@ body {margin: 0;}
   margin-bottom: 5px;
   border: 2px solid lightgrey;
   background-color: lightblue;
+}
+
+.column-title {
+  background: rgb(19, 109, 26);
+  margin-top: 0;
+}
+
+.card {
+  border-radius: 5px;
+  background: rgb(88, 155, 114);
+  border: 1px solid black;
+  height: 100px;
+}
+
+.card-list {
+  margin: 5px;
+  padding: 15px;
 }

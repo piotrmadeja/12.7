@@ -1,10 +1,12 @@
-body {
-  margin: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url(../images/board.jpg);
+  background-size: cover;
 }
 
 .ui-sortable {
@@ -23,8 +25,38 @@ body {
 }
 
 /* BOARD */
+.board {
+  text-align: center;
+  padding: 55px;
+  position: relative;
+  top: 30px;
+}
+.board img {
+  position: absolute;
+  top: 0;
+  left: 27.5%;
+  z-index: -1;
+}
 .board h1 {
-  margin-left: 8px;
+  color: black;
+}
+
+.create-column {
+  border-radius: 5px;
+  background: #39b94a;
+  border: none;
+  height: 30px;
+  width: 130px;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.create-column:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .column-container {
@@ -37,10 +69,26 @@ body {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.column-container .btn-primary, .column-container .column-add-card {
+  border-radius: 5px;
+  border: none;
+  background: #11a13d;
+  margin: 3px;
+}
+.column-container .btn-primary:hover, .column-container .column-add-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* COLUMN */
 .column {
+  border-radius: 5px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -50,13 +98,13 @@ body {
   margin-left: 8px;
   list-style: none;
   position: relative;
+  background: #149114;
+  border: 1px solid black;
 }
 
 .column-add-card {
   cursor: pointer;
-  text-decoration: underline;
-  margin: 5px 8px;
-  display: block;
+  text-decoration: none;
 }
 
 /* STYLE KARTY */
@@ -70,11 +118,8 @@ body {
   overflow: hidden;
   position: relative;
 }
-
-.card-list {
-  list-style: none;
-  margin: 5px;
-  padding: 0px;
+.card p {
+  border-bottom: 1px solid;
 }
 
 .card-description {
@@ -89,6 +134,23 @@ body {
   margin-bottom: 5px;
   border: 2px solid lightgrey;
   background-color: lightblue;
+}
+
+.column-title {
+  background: #136d1a;
+  margin-top: 0;
+}
+
+.card {
+  border-radius: 5px;
+  background: #589b72;
+  border: 1px solid black;
+  height: 100px;
+}
+
+.card-list {
+  margin: 5px;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
